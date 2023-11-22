@@ -1,0 +1,9 @@
+.android-44 {
+  .page-actions {
+    button {
+      &:not(:last-child) {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
