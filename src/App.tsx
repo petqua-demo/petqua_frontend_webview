@@ -55,9 +55,9 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/category" element={<CategoryListView />} />
+          <Route path="/" element={<CategoryListView />} />
 
-          <Route path="/category/:id" element={<CategoryDetailView />} />
+          <Route path="/:id" element={<CategoryDetailView />} />
         </Routes>
       </BrowserRouter>
 

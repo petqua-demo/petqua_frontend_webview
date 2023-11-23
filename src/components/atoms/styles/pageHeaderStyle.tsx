@@ -7,6 +7,11 @@ export const PageHeaderContainer = styled.div`
   flex-direction: column;
   padding: 0 16px;
   border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
 `;
 export const PageHeaderTitle = styled.div`
   font-size: 16px;
@@ -19,8 +24,10 @@ export const PageHeaderTitle = styled.div`
 `;
 
 export const PageHeaderBackButton = styled.div`
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: #fff;
   border-radius: 50%;
 `;
