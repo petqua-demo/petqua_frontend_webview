@@ -5,6 +5,7 @@ export const CategoryDetailContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 `;
 
 export const CategoryDetailImageContainer = styled.div`
