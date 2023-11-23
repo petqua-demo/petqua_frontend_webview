@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './Drawer.scss';
 import { DrawerPosition, DrawerSize } from '../types';
-import { useAppDispatch } from '../../../../modules/redux/store';
-import { dismissAll } from '../DrawerAction';
 
 const DrawerItem = ({ payload }: any) => {
   const [mounted, setMounted] = useState(false);
@@ -115,7 +113,7 @@ const DrawerItem = ({ payload }: any) => {
           <div className="container" style={styles} onClick={(e) => e.stopPropagation()}>
             {/* Dynamic component rendering... */}
             {/* <MainContainer /> */}
-            <payload.component />
+            <payload.component payload={payload} close={closeDrawer} />
             {payload.useCloseButton && (
               <div className="drawer-backward-header">
                 <div className="drawer-backward-header__container">
