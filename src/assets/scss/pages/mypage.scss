@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+// 설정과 같은 기타 메뉴
+.other-menu {
+  &-list {
+    padding-top: unit(8);
+    li {
+      @include text-variant(body1, $color-gray-64);
+
+      &:not(:last-child) {
+        // margin-bottom: unit(24);
+      }
+    }
+
+    button {
+      @include text-variant(body1, $color-gray-64);
+    }
+  }
+}
+
+// 사용자 목록
+.user-list {
+  // padding-top: unit(24);
+
+  li {
+    display: flex;
+    // gap: unit(12);
+    align-items: center;
+
+    &:not(:last-child) {
+      // margin-bottom: unit(20);
+    }
+
+    span {
+      @include text-variant(body1, $color-gray-64);
+    }
+  }
+}

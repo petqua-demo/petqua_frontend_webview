@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/petqua_frontend_webview/static/css/main.be00098f.css",
+    "main.js": "/petqua_frontend_webview/static/js/main.bea988ef.js",
+    "index.html": "/petqua_frontend_webview/index.html",
+    "main.be00098f.css.map": "/petqua_frontend_webview/static/css/main.be00098f.css.map",
+    "main.bea988ef.js.map": "/petqua_frontend_webview/static/js/main.bea988ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be00098f.css",
+    "static/js/main.bea988ef.js"
+  ]
+}

@@ -27,9 +27,7 @@
 .toast-item {
   // position: relative;
 
-  top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   bottom: 0;
   margin: auto;
   overflow: auto;
@@ -52,9 +50,10 @@
     position: relative;
     margin: 0 20px;
     padding: 0 16px;
-    min-height: 40px;
+    min-height: 56px;
     border-radius: 12px;
-    background-color: #fff;
+    background-color: #000;
+    opacity: 0.85;
     .svg-icon {
       font-size: 24px;
     }
@@ -72,7 +71,7 @@
       line-height: 1.5;
       letter-spacing: -0.2px;
       color: #787878;
-      min-height: 40px;
+      min-height: 56px;
     }
   }
 
@@ -84,7 +83,7 @@
     font-size: 14px;
     letter-spacing: -0.25px;
     line-height: 1.33;
-    min-height: 40px;
+    min-height: 56px;
   }
 
   & {
@@ -98,7 +97,7 @@
 
   &.SUCCESS {
     // color: $color-state-success;
-    color: #00c64f;
+    color: #fff;
   }
   &.fadeIn {
     animation: fadeIn 250ms cubic-bezier(0.45, 0, 0.55, 1);

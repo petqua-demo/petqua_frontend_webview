@@ -11,10 +11,10 @@ const ToastItem = ({ payload }: any) => {
   const dispatch = useDispatch();
 
   const itemPosition = {
-    bottom: margin?.bottom ? `${margin.bottom}px` : null,
-    top: margin?.top ? `${margin.top}px` : null,
-    left: margin?.left ? `${margin.left}px` : null,
-    right: margin?.right ? `${margin.right}px` : null,
+    bottom: margin?.bottom ? `${margin.bottom}px` : ``,
+    top: margin?.top ? `${margin.top}px` : ``,
+    left: margin?.left ? `${margin.left}px` : ``,
+    right: margin?.right ? `${margin.right}px` : ``,
   };
 
   useEffect(() => {
@@ -46,7 +46,15 @@ const ToastItem = ({ payload }: any) => {
   }
 
   return (
-    <li className={`toast-item ${type} ${getTransitionName()}`}>
+    <li
+      className={`toast-item ${type} ${getTransitionName()}`}
+      style={{
+        marginBottom: margin?.bottom,
+        marginTop: margin?.top,
+        marginLeft: margin?.left,
+        marginRight: margin?.right,
+      }}
+    >
       <div className="toast-item-container">
         {/* For simplicity, I'm using a placeholder icon instead of SVG */}
         <p className="toast-body">{message}</p>
