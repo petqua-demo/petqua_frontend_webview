@@ -14,10 +14,10 @@ createAction(ALERT);
 const initialState = {
   items: [],
   margin: {
-    top: null,
-    right: null,
-    bottom: null,
-    left: null,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
   },
 };
 
@@ -61,6 +61,7 @@ export const toastSlice = createSlice({
         message: action.payload.message,
         duration: action.payload.duration ?? 3000,
         useCloseButton: action.payload.useCloseButton ?? true,
+        margin: action.payload.margin ?? null,
       };
 
       state.items = [...state.items, item];
@@ -80,6 +81,9 @@ export const toastSlice = createSlice({
     });
     builder.addCase(HIDE_ALL, (state) => {
       state.items = [];
+    });
+    builder.addCase('SET_TOAST_MARGIN', (state, action: any) => {
+      state.margin = action.payload;
     });
   },
 });

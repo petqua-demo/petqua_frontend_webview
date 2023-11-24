@@ -35,13 +35,18 @@ export const CategoryListBody = styled.div`
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0 8px;
+  div.item-wrap {
+    width: 50%;
+    /* padding: 0 16px; */
+  }
 `;
 
 export const CategoryListBodyItem = styled.div`
   /* height: 56px; */
   line-height: 56px;
   background-color: #fff;
-  padding: 0 16px;
+  /* padding: 0 16px; */
   margin-bottom: 24px;
 `;
 

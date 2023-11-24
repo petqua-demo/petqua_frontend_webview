@@ -1,4 +1,4 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { drawerSlice } from '../../components/modules/drawer/DrawerReducer';
 import { toastSlice } from '../../components/modules/toast/ToastReducer';

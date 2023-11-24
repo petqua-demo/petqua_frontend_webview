@@ -19,6 +19,7 @@ export function show(payload: {
   duration?: number;
   clear?: boolean;
   useCloseButton?: boolean;
+  margin: any;
 }) {
   return {
     type: payload.type,
@@ -33,7 +34,13 @@ export function alert(payload: { message: any }) {
   };
 }
 
-export function success(payload: { message: any }) {
+export function success(payload: {
+  message: any;
+  duration?: number;
+  clear?: boolean;
+  useCloseButton?: boolean;
+  margin?: any;
+}) {
   return {
     type: SUCCESS,
     payload,
@@ -57,5 +64,13 @@ export function hide(id: any) {
 export function hideAll() {
   return {
     type: HIDE_ALL,
+  };
+}
+
+export function setToastMargin(payload: any) {
+  console.log('setToastMargin', payload);
+  return {
+    type: 'SET_TOAST_MARGIN',
+    payload,
   };
 }
