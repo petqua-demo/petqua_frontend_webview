@@ -5,6 +5,7 @@ export const CategoryDetailContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 `;
 
 export const CategoryDetailImageContainer = styled.div`
@@ -56,31 +57,36 @@ export const CategoryDetailOriginPrice = styled.div`
   color: #828282;
   line-height: 14px;
   font-size: 14px;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 `;
 
 export const CategoryDetailDiscountPriceContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-top: 36px;
+  margin-bottom: 4px;
 `;
 
 export const CategoryDetailDiscountPrice = styled.div`
-  text-align: left;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 18px;
-  margin-right: 8px;
+  color: var(--Main-Dark, #333);
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 `;
 
 export const CategoryDetailDiscountRate = styled.div`
-  text-align: left;
-  margin-bottom: 4px;
-  margin-right: 4px;
-  font-size: 18px;
-  line-height: 18px;
-  color: red;
+  color: #ff3131;
+
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 `;
 
 export const CategoryDetailSalePrice = styled.div`
@@ -120,18 +126,36 @@ export const CategoryDetailButtomContainer = styled.div`
   border-top: 1px solid #e0e0e0;
   height: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 0 16px;
   z-index: 999;
   border-radius: 16px 16px 0 0;
 `;
-
+export const HeartButtonContainer = styled.div`
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: flex-end; */
+  align-items: center;
+  p {
+    color: var(--gray-2, #4d4d4d);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.3px;
+  }
+`;
 export const CategoryDetailBottomButton = styled.div`
   width: 100%;
   height: 56px;
   background-color: #004bca;
   border-radius: 16px;
-  margin: 24px 0;
+  margin: 24px 0 24px 24px;
   color: #fff;
   display: flex;
   justify-content: center;

@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import * as s from '../styles/categoryFilterStyle';
-import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../../../../modules/redux/store';
 import { success } from '../../../../components/modules/toast/ToastAction';
 
 const CategoryFilter = ({ payload, close }: any) => {
-  const { event, data } = payload;
+  const { data } = payload;
   const [isCheck, setIsCheck] = useState(0);
   const dispatch = useAppDispatch();
 

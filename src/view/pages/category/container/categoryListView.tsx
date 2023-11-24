@@ -1,10 +1,9 @@
 import * as c from '../styles/categoryListStyle';
 import { dismissAll, presentDrawer } from '../../../../components/modules/drawer/DrawerAction';
 import CategoryFilter from '../../../../components/resources/category/container/categoryFilter';
-import { useDispatch } from 'react-redux';
 import { useAppDispatch } from '../../../../modules/redux/store';
 import CategoryItem from '../../../../components/resources/category/container/categoryItem';
-import { Link, Route, Router, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Filter } from '../../../../assets/data/filter';
 import { FishData } from '../../../..//assets/data/fishData';
 import PageHeader from '../../../../components/atoms/container/pageHeader';
@@ -66,7 +65,7 @@ const CategoryListView = () => {
       </c.CategoryFilterContainer>
       <c.CategoryListBody>
         {FishData.items.map((item: any) => (
-          <div onClick={() => handleNavigate(item.productId, item)}>
+          <div className="item-wrap" onClick={() => handleNavigate(item.productId, item)}>
             <CategoryItem key={item.productId} data={{ ...item }} />
           </div>
         ))}

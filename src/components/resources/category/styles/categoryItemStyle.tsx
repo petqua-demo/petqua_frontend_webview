@@ -11,15 +11,19 @@ export const CategoryListBody = styled.div`
 
 export const CategoryListBodyItem = styled.div`
   /* height: 56px; */
+  width: 100%;
   line-height: 56px;
   background-color: #fff;
-  padding: 0 16px;
+  /* padding: 0 16px; */
   margin-bottom: 24px;
+  padding: 0 8px;
 `;
 
 export const CategoryListItemImage = styled.div`
-  width: 160px;
-  height: 160px;
+  /* width: 160px; */
+  /* height: 160px; */
+  width: 100%;
+  height: 200px;
   border: 1px solid #e0e0e0;
   border-radius: 16px;
   background-color: #ccc;

@@ -10,6 +10,7 @@ export interface ToastItem {
   message: string;
   duration: number;
   useCloseButton: boolean;
+  margin?: ToastMargin;
 }
 
 export interface ToastMargin {
