@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/petqua_frontend_webview/static/css/main.be00098f.css",
-    "main.js": "/petqua_frontend_webview/static/js/main.bea988ef.js",
+    "main.css": "/petqua_frontend_webview/static/css/main.7275a3f0.css",
+    "main.js": "/petqua_frontend_webview/static/js/main.dd100151.js",
+    "static/media/cart-icon.svg": "/petqua_frontend_webview/static/media/cart-icon.26e7d439ac1d771a86c3a63a606b20a0.svg",
+    "static/media/heart-icon.svg": "/petqua_frontend_webview/static/media/heart-icon.aac46d5d593c4af171c31c4d225cd038.svg",
+    "static/media/search-icon.svg": "/petqua_frontend_webview/static/media/search-icon.af468c238ecf199b4c52229c6e6a28bd.svg",
     "index.html": "/petqua_frontend_webview/index.html",
-    "main.be00098f.css.map": "/petqua_frontend_webview/static/css/main.be00098f.css.map",
-    "main.bea988ef.js.map": "/petqua_frontend_webview/static/js/main.bea988ef.js.map"
+    "static/media/back-icon.svg": "/petqua_frontend_webview/static/media/back-icon.646bffdf8b9fe71bf07186f43f243631.svg",
+    "main.7275a3f0.css.map": "/petqua_frontend_webview/static/css/main.7275a3f0.css.map",
+    "main.dd100151.js.map": "/petqua_frontend_webview/static/js/main.dd100151.js.map"
   },
   "entrypoints": [
-    "static/css/main.be00098f.css",
-    "static/js/main.bea988ef.js"
+    "static/css/main.7275a3f0.css",
+    "static/js/main.dd100151.js"
   ]
 }
