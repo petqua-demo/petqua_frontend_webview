@@ -1,14 +1,17 @@
 import * as c from '../styles/categoryDetailStyle';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import PageHeader from '../../../../components/atoms/container/pageHeader';
 import { ReactSVG } from 'react-svg';
 import HaertIcon from '../../../../assets/icons/svg/heart-icon.svg';
 import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../../../modules/redux/store';
 import { setToastMargin, success } from '../../../../components/modules/toast/ToastAction';
+import { dismissAll, presentDrawer } from '../../../../components/modules/drawer/DrawerAction';
+import FishAdoption from '../../../../components/resources/category/container/FishAdoption';
 const CategoryDetailView = () => {
   const [isHeart, setIsHeart] = useState(false);
   const dispatch = useAppDispatch();
+  const nav = useNavigate();
   const location = useLocation();
   const data = location.state;
 
@@ -28,6 +31,9 @@ const CategoryDetailView = () => {
       setIsHeart(true);
       dispatch(success({ message: '찜목록에 추가되었습니다', margin: { bottom: '100px' } }));
     }
+  }
+  function handleOpenDrawer(drawerPayload: any) {
+    dispatch(presentDrawer(drawerPayload));
   }
 
   return (
@@ -66,7 +72,27 @@ const CategoryDetailView = () => {
           <p>100</p>
         </c.HeartButtonContainer>
 
-        <c.CategoryDetailBottomButton>입양하기</c.CategoryDetailBottomButton>
+        <c.CategoryDetailBottomButton
+          onClick={() => {
+            handleOpenDrawer({
+              component: FishAdoption,
+              useCloseButton: false,
+              data: {},
+              event: {
+                onClose: () => {
+                  dispatch(dismissAll());
+                },
+                onConfirm: () => {
+                  nav('/payment', {
+                    state: data,
+                  });
+                },
+              },
+            });
+          }}
+        >
+          입양하기
+        </c.CategoryDetailBottomButton>
       </c.CategoryDetailButtomContainer>
     </c.CategoryDetailContainer>
   );

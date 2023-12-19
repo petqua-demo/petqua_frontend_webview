@@ -9,6 +9,9 @@ import './assets/scss/styles.scss';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import CategoryListView from './view/pages/category/container/categoryListView';
 import CategoryDetailView from './view/pages/category/container/categoryDetailView';
+import { useEffect } from 'react';
+import { setBaseURL } from './modules/axios';
+import FishPaymentDetail from './view/pages/payment/container/fishPaymentDetail';
 
 const App = () => {
   const drawerState = useSelector((state: any) => state.drawer);
@@ -51,6 +54,10 @@ const App = () => {
     // dispatch(error({ message: 'This is an error toast message' }));
   };
 
+  useEffect(() => {
+    setBaseURL('http://ec2-54-180-85-61.ap-northeast-2.compute.amazonaws.com:8080/');
+  }, []);
+
   return (
     <>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -58,6 +65,7 @@ const App = () => {
           <Route path="/" element={<CategoryListView />} />
 
           <Route path="/:id" element={<CategoryDetailView />} />
+          <Route path="/payment" element={<FishPaymentDetail />} />
         </Routes>
       </BrowserRouter>
 

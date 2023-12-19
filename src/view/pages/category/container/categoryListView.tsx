@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { Filter } from '../../../../assets/data/filter';
 import { FishData } from '../../../..//assets/data/fishData';
 import PageHeader from '../../../../components/atoms/container/pageHeader';
+import { DrawerPosition } from '../../../../components/modules/drawer/types';
 
 const CategoryListView = () => {
   const dispatch = useAppDispatch();
