@@ -1,17 +1,56 @@
+import { useState } from 'react';
 import * as s from '../styles/PaymentSelectorInfoStyle';
 
+const PaymentList = [
+  {
+    name: '신용/체크카드',
+    value: 'creditCard',
+  },
+  {
+    name: '간편카드결제',
+    value: 'simpleCard',
+  },
+  {
+    name: '페이코',
+    value: 'payco',
+  },
+  {
+    name: '토스페이',
+    value: 'tossPay',
+  },
+  {
+    name: '카카오페이',
+    value: 'kakaoPay',
+  },
+  {
+    name: '네이버페이',
+    value: 'naverPay',
+  },
+  {
+    name: '휴대폰결제',
+    value: 'mobilePay',
+  },
+  {
+    name: '실시간 계좌이체',
+    value: 'realTimeAccountTransfer',
+  },
+];
+
 export const PaymentSelectorInfo = () => {
+  const [payment, setPayment] = useState('creditCard');
+
   return (
     <s.PaymentSelectorInfoContainer>
       <s.PaymentSelectorInfoUl>
-        <s.PaymentSelectorInfoLi>신용/체크카드</s.PaymentSelectorInfoLi>
-        <s.PaymentSelectorInfoLi>간편카드결제</s.PaymentSelectorInfoLi>
-        <s.PaymentSelectorInfoLi>페이코</s.PaymentSelectorInfoLi>
-        <s.PaymentSelectorInfoLi>토스페이</s.PaymentSelectorInfoLi>
-        <s.PaymentSelectorInfoLi>카카오페이</s.PaymentSelectorInfoLi>
-        <s.PaymentSelectorInfoLi>네이버페이</s.PaymentSelectorInfoLi>
-        <s.PaymentSelectorInfoLi>휴대폰결제</s.PaymentSelectorInfoLi>
-        <s.PaymentSelectorInfoLi>실시간 계좌이체</s.PaymentSelectorInfoLi>
+        {PaymentList.map((item, index) => (
+          <s.PaymentSelectorInfoLi
+            className={payment === item.value ? 'selected' : ''}
+            onClick={() => setPayment(item.value)}
+            key={item.value}
+          >
+            {item.name}
+          </s.PaymentSelectorInfoLi>
+        ))}
       </s.PaymentSelectorInfoUl>
     </s.PaymentSelectorInfoContainer>
   );

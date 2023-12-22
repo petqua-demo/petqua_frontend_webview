@@ -149,6 +149,11 @@ export const HeartButtonContainer = styled.div`
     line-height: normal;
     letter-spacing: -0.3px;
   }
+  div.checked {
+    svg {
+      fill: #69a1ff;
+    }
+  }
 `;
 export const CategoryDetailBottomButton = styled.div`
   width: 100%;

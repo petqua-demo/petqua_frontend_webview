@@ -11,6 +11,7 @@ export interface ToastItem {
   duration: number;
   useCloseButton: boolean;
   margin?: ToastMargin;
+  action?: any;
 }
 
 export interface ToastMargin {

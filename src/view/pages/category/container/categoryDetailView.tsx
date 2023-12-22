@@ -2,7 +2,7 @@ import * as c from '../styles/categoryDetailStyle';
 import { useLocation, useNavigate } from 'react-router-dom';
 import PageHeader from '../../../../components/atoms/container/pageHeader';
 import { ReactSVG } from 'react-svg';
-import HaertIcon from '../../../../assets/icons/svg/heart-icon.svg';
+import LikeIcon from '../../../../assets/icons/svg/like-icon.svg';
 import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../../../modules/redux/store';
 import { setToastMargin, success } from '../../../../components/modules/toast/ToastAction';
@@ -68,8 +68,10 @@ const CategoryDetailView = () => {
       </c.CategeoryDetailInfoContainer>
       <c.CategoryDetailButtomContainer>
         <c.HeartButtonContainer>
-          <ReactSVG onClick={handleHeart} src={HaertIcon} />
-          <p>100</p>
+          <div className={isHeart ? 'checked' : ''}>
+            <ReactSVG onClick={handleHeart} src={LikeIcon} />
+            <p>100</p>
+          </div>
         </c.HeartButtonContainer>
 
         <c.CategoryDetailBottomButton

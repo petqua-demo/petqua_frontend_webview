@@ -26,4 +26,7 @@ export const PaymentSelectorInfoLi = styled.li`
   border: 0.5px solid #b9bdc5;
   border-radius: 6px;
   flex-grow: 1;
+  &.selected {
+    border: 1px solid #333;
+  }
 `;

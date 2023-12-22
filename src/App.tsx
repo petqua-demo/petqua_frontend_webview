@@ -12,6 +12,7 @@ import CategoryDetailView from './view/pages/category/container/categoryDetailVi
 import { useEffect } from 'react';
 import { setBaseURL } from './modules/axios';
 import FishPaymentDetail from './view/pages/payment/container/fishPaymentDetail';
+import CategoryCartView from './view/pages/category/container/categoryCartView';
 
 const App = () => {
   const drawerState = useSelector((state: any) => state.drawer);
@@ -63,22 +64,21 @@ const App = () => {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<CategoryListView />} />
-
           <Route path="/:id" element={<CategoryDetailView />} />
           <Route path="/payment" element={<FishPaymentDetail />} />
+          <Route path="/cart" element={<CategoryCartView />} />
         </Routes>
+        {drawerState.items !== undefined && (
+          <div>
+            <Drawer items={drawerState.items} />
+          </div>
+        )}
+        {toastState.items !== undefined && (
+          <div>
+            <Toast items={toastState.items} />
+          </div>
+        )}
       </BrowserRouter>
-
-      {drawerState.items !== undefined && (
-        <div>
-          <Drawer items={drawerState.items} />
-        </div>
-      )}
-      {toastState.items !== undefined && (
-        <div>
-          <Toast items={toastState.items} />
-        </div>
-      )}
     </>
   );
 };

@@ -21,4 +21,8 @@ export const DeliveryInfoLi = styled.li`
   font-weight: 500;
   border-radius: 6px;
   border: 0.5px solid #b9bdc5;
+  &.selected {
+    border: 1px solid #004bca;
+    color: #004bca;
+  }
 `;
