@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'react';
 import * as s from '../styles/FishAdoptionStyle';
+import { useAppDispatch } from '../../../../modules/redux/store';
+import { success } from '../../../../components/modules/toast/ToastAction';
+import { useNavigate } from 'react-router-dom';
 
 const FishAdoption = ({ data, payload, close }: any) => {
   const [quantity, setQuantity] = useState(1);
+  const dispatch = useAppDispatch();
+  const nav = useNavigate();
 
   return (
     <s.FishAdoptionContainer>
@@ -32,7 +37,26 @@ const FishAdoption = ({ data, payload, close }: any) => {
         </s.FishAdoptionQuantitySelectorArea>
       </s.FishAdoptionBody>
       <s.FishAdoptionButtonContainer>
-        <s.FishAdoptionButton color="#004BCA" border=" #004BCA">
+        <s.FishAdoptionButton
+          onClick={() => {
+            dispatch(
+              success({
+                message: '봉달목록에 추가되었습니다',
+                margin: { bottom: '100px' },
+                action: {
+                  action: () => {
+                    nav('/cart');
+                    console.log('봉달목록 가기');
+                  },
+                  text: '봉달목록 가기 >',
+                },
+              }),
+            );
+            close();
+          }}
+          color="#004BCA"
+          border=" #004BCA"
+        >
           봉달하기
         </s.FishAdoptionButton>
         <s.FishAdoptionButton
