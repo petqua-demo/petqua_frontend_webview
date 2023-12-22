@@ -5,7 +5,7 @@ import './Toast.scss';
 import { hideAll } from '../ToastAction';
 
 const ToastItem = ({ payload }: any) => {
-  const { type, message, margin, duration = 3500, useCloseButton } = payload;
+  const { type, message, margin, duration = 3500, useCloseButton, action } = payload;
   const [mounted, setMounted] = useState(false);
 
   const dispatch = useDispatch();
@@ -58,7 +58,7 @@ const ToastItem = ({ payload }: any) => {
       <div className="toast-item-container">
         {/* For simplicity, I'm using a placeholder icon instead of SVG */}
         <p className="toast-body">{message}</p>
-        {useCloseButton && (
+        {useCloseButton && action === null && (
           <button
             onClick={() => {
               closeToast();
@@ -67,6 +67,17 @@ const ToastItem = ({ payload }: any) => {
             }}
           >
             닫기
+          </button>
+        )}
+        {action !== null && (
+          <button
+            style={{ textDecoration: 'underline' }}
+            onClick={() => {
+              action.action(action.data);
+              closeToast();
+            }}
+          >
+            {action.text}
           </button>
         )}
       </div>

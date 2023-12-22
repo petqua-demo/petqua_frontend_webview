@@ -39,6 +39,7 @@ export function success(payload: {
   duration?: number;
   clear?: boolean;
   useCloseButton?: boolean;
+  action?: any;
   margin?: any;
 }) {
   return {

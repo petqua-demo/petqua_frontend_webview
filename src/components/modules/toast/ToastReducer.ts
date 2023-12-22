@@ -41,6 +41,7 @@ export const toastSlice = createSlice({
         message: action.payload.message,
         duration: action.payload.duration ?? 3000,
         useCloseButton: action.payload.useCloseButton ?? true,
+        action: action.payload.action ?? null,
       };
       state.items = [...state.items, item];
     });
@@ -51,6 +52,7 @@ export const toastSlice = createSlice({
         message: action.payload.message,
         duration: action.payload.duration ?? 3000,
         useCloseButton: action.payload.useCloseButton ?? true,
+        action: action.payload.action ?? null,
       };
       state.items = [...state.items, item];
     });
@@ -62,6 +64,7 @@ export const toastSlice = createSlice({
         duration: action.payload.duration ?? 3000,
         useCloseButton: action.payload.useCloseButton ?? true,
         margin: action.payload.margin ?? null,
+        action: action.payload.action ?? null,
       };
 
       state.items = [...state.items, item];
@@ -73,6 +76,7 @@ export const toastSlice = createSlice({
         message: action.payload.message,
         duration: action.payload.duration ?? 3000,
         useCloseButton: action.payload.useCloseButton ?? true,
+        action: action.payload.action ?? null,
       };
       state.items = [...state.items, item];
     });
