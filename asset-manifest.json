@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/petqua_frontend_webview/static/css/main.7275a3f0.css",
-    "main.js": "/petqua_frontend_webview/static/js/main.dd100151.js",
+    "main.js": "/petqua_frontend_webview/static/js/main.95b71249.js",
     "static/media/cart-icon.svg": "/petqua_frontend_webview/static/media/cart-icon.26e7d439ac1d771a86c3a63a606b20a0.svg",
-    "static/media/heart-icon.svg": "/petqua_frontend_webview/static/media/heart-icon.aac46d5d593c4af171c31c4d225cd038.svg",
+    "static/media/like-icon.svg": "/petqua_frontend_webview/static/media/like-icon.42d035b84db717045ec5c64773192568.svg",
     "static/media/search-icon.svg": "/petqua_frontend_webview/static/media/search-icon.af468c238ecf199b4c52229c6e6a28bd.svg",
     "index.html": "/petqua_frontend_webview/index.html",
     "static/media/back-icon.svg": "/petqua_frontend_webview/static/media/back-icon.646bffdf8b9fe71bf07186f43f243631.svg",
     "main.7275a3f0.css.map": "/petqua_frontend_webview/static/css/main.7275a3f0.css.map",
-    "main.dd100151.js.map": "/petqua_frontend_webview/static/js/main.dd100151.js.map"
+    "main.95b71249.js.map": "/petqua_frontend_webview/static/js/main.95b71249.js.map"
   },
   "entrypoints": [
     "static/css/main.7275a3f0.css",
-    "static/js/main.dd100151.js"
+    "static/js/main.95b71249.js"
   ]
 }
