@@ -70,7 +70,7 @@ const CategoryDetailView = () => {
         <c.HeartButtonContainer>
           <div className={isHeart ? 'checked' : ''}>
             <ReactSVG onClick={handleHeart} src={LikeIcon} />
-            <p>100</p>
+            {/* <p>100</p> */}
           </div>
         </c.HeartButtonContainer>
 
@@ -79,12 +79,12 @@ const CategoryDetailView = () => {
             handleOpenDrawer({
               component: FishAdoption,
               useCloseButton: false,
-              data: {},
+              data: data,
               event: {
                 onClose: () => {
                   dispatch(dismissAll());
                 },
-                onConfirm: () => {
+                onConfirm: ({ data }: any) => {
                   nav('/payment', {
                     state: data,
                   });

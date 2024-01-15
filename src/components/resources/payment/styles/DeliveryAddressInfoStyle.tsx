@@ -20,3 +20,15 @@ export const DeliveryAddressInfoBox = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const DeliveryPostCode = styled.div`
+  width: 100%;
+  min-height: max(80vh, calc(444px - 70px));
+  max-height: 80vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+`;

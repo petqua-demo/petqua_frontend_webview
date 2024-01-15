@@ -27,7 +27,7 @@ const CategoryListView = () => {
     <c.CategoryListContainer>
       <PageHeader title={'구피'} />
       <c.CategoryFilterContainer>
-        <c.CategoryFilterItem
+        {/* <c.CategoryFilterItem
           onClick={() => {
             handleOpenDrawer({
               component: CategoryFilter,
@@ -44,7 +44,7 @@ const CategoryListView = () => {
           }}
         >
           어종
-        </c.CategoryFilterItem>
+        </c.CategoryFilterItem> */}
         <c.CategoryFilterItem
           onClick={() => {
             handleOpenDrawer({

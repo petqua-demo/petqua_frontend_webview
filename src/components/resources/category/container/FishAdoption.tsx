@@ -4,15 +4,21 @@ import { useAppDispatch } from '../../../../modules/redux/store';
 import { success } from '../../../../components/modules/toast/ToastAction';
 import { useNavigate } from 'react-router-dom';
 
-const FishAdoption = ({ data, payload, close }: any) => {
+const FishAdoption = ({ payload, close }: any) => {
   const [quantity, setQuantity] = useState(1);
+  const { salePrice, productName, productId } = payload.data;
+  const [price, setPrice] = useState(quantity * salePrice);
   const dispatch = useAppDispatch();
   const nav = useNavigate();
+
+  useEffect(() => {
+    setPrice(quantity * salePrice);
+  }, [quantity]);
 
   return (
     <s.FishAdoptionContainer>
       <s.FishAdoptionHeader>
-        <s.FishAdoptionPrice>1,000,000원</s.FishAdoptionPrice>
+        <s.FishAdoptionPrice>{price.toLocaleString()}원</s.FishAdoptionPrice>
       </s.FishAdoptionHeader>
       <s.FishAdoptionBody>
         <s.FishAdoptionQuantity>수량</s.FishAdoptionQuantity>
@@ -65,7 +71,12 @@ const FishAdoption = ({ data, payload, close }: any) => {
           backgroundColor="#004BCA"
           onClick={() => {
             payload.event?.onConfirm({
-              quantity: quantity,
+              data: {
+                quantity: quantity,
+                price: price,
+                productName: productName,
+                productId: productId,
+              },
             });
             close();
           }}

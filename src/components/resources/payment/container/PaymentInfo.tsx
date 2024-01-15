@@ -1,11 +1,12 @@
 import * as s from '../styles/PaymentInfoStyle';
 
-export const PaymentInfo = () => {
+export const PaymentInfo = ({ data }: any) => {
+  const { quantity, price, productName, productId } = data;
   return (
     <s.PaymentInfoContainer>
       <s.PaymentInfoTotalPrice>
         <s.PaymentInfoPriceTitle>총 입양 금액</s.PaymentInfoPriceTitle>
-        <s.PaymentInfoPrice>{(3000).toLocaleString()} 원</s.PaymentInfoPrice>
+        <s.PaymentInfoPrice>{price.toLocaleString()} 원</s.PaymentInfoPrice>
       </s.PaymentInfoTotalPrice>
 
       <s.PaymentInfoDeliveryPrice>
@@ -18,7 +19,7 @@ export const PaymentInfo = () => {
       </s.PaymentInfoDiscountPrice>
       <s.PaymentInfoTotalPriceBox>
         <s.TotalPriceTitle>최종 결제 금액</s.TotalPriceTitle>
-        <s.TotalPrice>{(40000).toLocaleString()} 원</s.TotalPrice>
+        <s.TotalPrice>{price.toLocaleString()} 원</s.TotalPrice>
       </s.PaymentInfoTotalPriceBox>
     </s.PaymentInfoContainer>
   );

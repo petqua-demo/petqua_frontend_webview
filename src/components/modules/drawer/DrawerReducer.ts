@@ -65,6 +65,7 @@ export const drawerSlice = createSlice({
         noPadding: action.payload.noPadding ?? false,
         animationName: action.payload.animationName ?? DrawerTransitionName.DEFAULT,
         component: action.payload.component,
+        data: action.payload.data,
       };
       state.items = [...state.items, drawerItem];
     });

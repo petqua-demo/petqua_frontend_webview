@@ -5,7 +5,10 @@ import * as s from '../styles/fishPaymentDetailStyle';
 import DeliveryInfo from '../../../../components/resources/payment/container/DeliveryInfo';
 import PaymentInfo from '../../../../components/resources/payment/container/PaymentInfo';
 import PaymentSelectorInfo from '../../../../components/resources/payment/container/PaymentSelector';
+import { useLocation } from 'react-router-dom';
 const FishPaymentDetail = () => {
+  //nav로 받아온 데이터 console.log(location.state);
+  const location = useLocation();
   return (
     <s.FishPaymentDetailContainer>
       <PageHeader title={'주문 / 결제'} />
@@ -19,7 +22,7 @@ const FishPaymentDetail = () => {
         <s.FishPaymentDetailIndicator>
           <s.FishPaymentDetailIndicatorDetail open>
             <s.FishPaymentDetailIndicatorSummary>상품정보</s.FishPaymentDetailIndicatorSummary>
-            <ProductInfo />
+            <ProductInfo data={location.state} />
           </s.FishPaymentDetailIndicatorDetail>
         </s.FishPaymentDetailIndicator>
         <s.FishPaymentDetailIndicator>
@@ -38,7 +41,7 @@ const FishPaymentDetail = () => {
         <s.FishPaymentDetailIndicator>
           <s.FishPaymentDetailIndicatorDetail open>
             <s.FishPaymentDetailIndicatorSummary>결제금액</s.FishPaymentDetailIndicatorSummary>
-            <PaymentInfo />
+            <PaymentInfo data={location.state} />
           </s.FishPaymentDetailIndicatorDetail>
         </s.FishPaymentDetailIndicator>
       </s.FishPaymentDetailBody>
