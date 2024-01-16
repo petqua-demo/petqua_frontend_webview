@@ -7,11 +7,10 @@ import halfmoon from '../../../../assets/img/halfmoon.png';
 const arr = [neon,rainbow,fullblack,halfmoon];
 
 const CategoryItem = ({ data }: any) => {
-  console.log(data);
   return (
     <c.CategoryListBodyItem>
       <c.CategoryListItemImage>
-        <img src={arr[data.index]} />
+        <img src={arr[data.productId-1]} />
       </c.CategoryListItemImage>
       <c.CategoryItemStoreName>{data.storeName}</c.CategoryItemStoreName>
       <c.CategoryItemName>{data.productName}</c.CategoryItemName>

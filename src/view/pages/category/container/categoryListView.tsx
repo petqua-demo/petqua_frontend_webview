@@ -65,9 +65,9 @@ const CategoryListView = () => {
         </c.CategoryFilterItem>
       </c.CategoryFilterContainer>
       <c.CategoryListBody>
-        {FishData.items.map((item: any, index: number) => (
+        {FishData.items.map((item: any) => (
           <div className="item-wrap" onClick={() => handleNavigate(item.productId, item)}>
-            <CategoryItem key={item.productId} data={{ ...item, index }} />
+            <CategoryItem key={item.productId} data={{ ...item}} />
           </div>
         ))}
       </c.CategoryListBody>
