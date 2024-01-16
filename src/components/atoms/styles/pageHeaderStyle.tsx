@@ -16,9 +16,10 @@ export const PageHeaderContainer = styled.div`
 `;
 export const PageHeaderTitle = styled.div`
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   line-height: 56px;
+  margin-left: 30px;
   /* background-color: #fff; */
   /* padding: 0 16px; */
   /* margin-bottom: 20px; */
