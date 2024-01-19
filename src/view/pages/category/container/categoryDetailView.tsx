@@ -84,14 +84,14 @@ const CategoryDetailView = () => {
             handleOpenDrawer({
               component: FishAdoption,
               useCloseButton: false,
-              data: {},
+              data: {quantity : 1},
               event: {
                 onClose: () => {
                   dispatch(dismissAll());
                 },
-                onConfirm: () => {
+                onConfirm: ({quantity}: {quantity:number}) => {
                   nav('/payment', {
-                    state: data,
+                    state: { ...data, quantity: quantity},
                   });
                 },
               },
