@@ -3,7 +3,6 @@ import { styled } from 'styled-components';
 export const ProductInfoContainer = styled.div`
   width: 100%;
   height: 100%;
-  padding: 0 16px;
   margin-top: 6px;
 `;
 
@@ -16,11 +15,16 @@ export const ProcutInfoLi = styled.li`
   gap: 12px;
 `;
 export const ProductInfoImgArea = styled.div`
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
+  width: 110px;
+  height: 110px;
+  border-radius: 10px;
   background: var(--gray3, #f1f1f1);
   flex-shrink: 0;
+  img {
+    width : 100%;
+    height: 100%;
+    background-size: contain;
+  }
 `;
 export const ProductInfoArea = styled.div`
   width: 100%;

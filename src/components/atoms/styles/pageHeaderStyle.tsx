@@ -1,9 +1,11 @@
 import { styled } from 'styled-components';
 
 export const PageHeaderContainer = styled.div`
-  width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
   height: 60px;
   display: flex;
+  gap: 16px;
   /* flex-direction: column; */
   padding: 0 16px;
   border-bottom: 1px solid #e0e0e0;
@@ -13,12 +15,14 @@ export const PageHeaderContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  overflow-x: hidden;
 `;
 export const PageHeaderTitle = styled.div`
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   line-height: 56px;
+  //margin-left: 30px;
   /* background-color: #fff; */
   /* padding: 0 16px; */
   /* margin-bottom: 20px; */

@@ -25,7 +25,7 @@ const CategoryListView = () => {
 
   return (
     <c.CategoryListContainer>
-      <PageHeader title={'구피'} />
+      <PageHeader title={'난태생, 송사리과'} />    
       <c.CategoryFilterContainer>
         <c.CategoryFilterItem
           onClick={() => {
@@ -67,7 +67,7 @@ const CategoryListView = () => {
       <c.CategoryListBody>
         {FishData.items.map((item: any) => (
           <div className="item-wrap" onClick={() => handleNavigate(item.productId, item)}>
-            <CategoryItem key={item.productId} data={{ ...item }} />
+            <CategoryItem key={item.productId} data={{ ...item}} />
           </div>
         ))}
       </c.CategoryListBody>

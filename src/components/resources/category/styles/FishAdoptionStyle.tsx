@@ -10,7 +10,7 @@ export const FishAdoptionContainer = styled.div`
 
 export const FishAdoptionHeader = styled.div`
   width: 100%;
-  height: 60px;
+  height: 70px;
   /* display: flex; */
   /* flex-direction: row; */
   /* justify-content: center; */
@@ -38,18 +38,16 @@ export const FishAdoptionBody = styled.div`
   height: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 16px;
+  padding: 8px 0;
   /* flex-wrap: wrap; */
 `;
 export const FishAdoptionQuantity = styled.div`
   background-color: #fff;
   /* padding: 0 16px; */
-  font-size: 16px;
+  font-family: Pretendard;
+  font-size: 18px;
   line-height: 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  font-weight: 600;
 `;
 
 export const FishAdoptionQuantitySelectorArea = styled.div`

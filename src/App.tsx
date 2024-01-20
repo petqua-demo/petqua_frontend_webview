@@ -12,6 +12,7 @@ import CategoryDetailView from './view/pages/category/container/categoryDetailVi
 import { useEffect } from 'react';
 import { setBaseURL } from './modules/axios';
 import FishPaymentDetail from './view/pages/payment/container/fishPaymentDetail';
+import ScrollToTop from './utils/ScrollToTop';
 
 const App = () => {
   const drawerState = useSelector((state: any) => state.drawer);
@@ -61,6 +62,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<CategoryListView />} />
 

@@ -1,11 +1,11 @@
 import * as s from '../styles/DeliveryAddressInfoStyle';
 
-const DeliveryAddressInfo = () => {
+const DeliveryAddressInfo = ({ openModal } : any) => {
   return (
     <s.DeliveryAddressInfoContainer>
-      <s.DeliveryAddressInfoBox>
-        <p>배송지가 없습니다</p>
-        <p>배송지 입력하기</p>
+      <s.DeliveryAddressInfoBox onClick={openModal}>
+        <s.NoAddressText>배송지가 없습니다.</s.NoAddressText>
+        <s.InputAddressText>배송지 입력하기</s.InputAddressText>
       </s.DeliveryAddressInfoBox>
     </s.DeliveryAddressInfoContainer>
   );

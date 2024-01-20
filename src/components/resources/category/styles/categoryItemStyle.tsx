@@ -23,17 +23,17 @@ export const CategoryListItemImage = styled.div`
   /* width: 160px; */
   /* height: 160px; */
   width: 100%;
-  height: 200px;
+  height: 160px;
   border: 1px solid #e0e0e0;
   border-radius: 16px;
-  background-color: #ccc;
-  margin: 0 auto;
+  background-color: #D9E7FF;
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
+    width: 80%;
+    height: auto;
   }
 `;
 
@@ -45,19 +45,20 @@ export const CategoryListBodyItemTitle = styled.div`
 
 export const CategoryItemStoreName = styled.div`
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
+  font-family: Pretendard;
   text-align: left;
-  margin-bottom: 4px;
   line-height: 14px;
-  color: #828282;
-  margin-bottom: 4px;
+  color: #B9BDC5;
+  margin-bottom: 8px;
 `;
 export const CategoryItemName = styled.div`
   font-size: 17px;
   font-weight: 500;
+  font-family: Pretendard;
   text-align: left;
   line-height: 17px;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 `;
 export const CategoryItemOriginPrice = styled.div`
   text-align: left;
@@ -65,7 +66,9 @@ export const CategoryItemOriginPrice = styled.div`
   color: #828282;
   line-height: 14px;
   font-size: 14px;
-  margin-bottom: 4px;
+  font-family: Pretendard;
+  font-weight: 400;
+  margin-bottom: 8px;
 `;
 export const CategoryItemDiscountPriceContainer = styled.div`
   display: flex;
@@ -80,6 +83,7 @@ export const CategoryItemDiscountRate = styled.div`
   color: #ff3131;
   font-size: 16px;
   font-style: normal;
+  font-family: Pretendard;
   font-weight: 400;
   line-height: normal;
 `;
@@ -88,6 +92,7 @@ export const CategoryItemSalePrice = styled.div`
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
+  font-family: Pretendard;
   line-height: normal;
   margin-bottom: 4px;
 `;
