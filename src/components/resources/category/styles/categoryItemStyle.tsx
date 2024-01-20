@@ -23,7 +23,7 @@ export const CategoryListItemImage = styled.div`
   /* width: 160px; */
   /* height: 160px; */
   width: 100%;
-  height: 200px;
+  height: 160px;
   border: 1px solid #e0e0e0;
   border-radius: 16px;
   background-color: #D9E7FF;
@@ -31,6 +31,10 @@ export const CategoryListItemImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  img {
+    width: 80%;
+    height: auto;
+  }
 `;
 
 export const CategoryListBodyItemTitle = styled.div`

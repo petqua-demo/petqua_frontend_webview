@@ -25,7 +25,7 @@ const CategoryListView = () => {
 
   return (
     <c.CategoryListContainer>
-      <PageHeader title={'난태생, 송사리과'} />
+      <PageHeader title={'난태생, 송사리과'} />    
       <c.CategoryFilterContainer>
         <c.CategoryFilterItem
           onClick={() => {
